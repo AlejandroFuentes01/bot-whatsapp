@@ -19,7 +19,7 @@ client.on("qr", qr => {
 client.on("ready", () => {
   console.log("Enchufado");
 
-  const numero = "5213121682493@c.us"; // Cambiar por el número destino
+  const numero = "5219998888888@c.us"; // Cambiar por el número destino
 
   const enviarMuchos = async () => {
     for (let i = 1; i <= 300; i++) {
