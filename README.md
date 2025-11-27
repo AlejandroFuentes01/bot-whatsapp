@@ -1,6 +1,6 @@
 # Bot de WhatsApp
 
-Este es un bot simple de WhatsApp que envía 50 mensajes consecutivos a un número específico una vez que se autentica.
+Este es un bot simple de WhatsApp que envía N número de mensajes consecutivos a un número específico una vez que se autentica.
 
 ## Instalación
 
@@ -11,7 +11,7 @@ Este es un bot simple de WhatsApp que envía 50 mensajes consecutivos a un núme
 ## Uso
 
 1. Edita el archivo `bot.js` y cambia la variable `numero` por el número de destino en formato internacional sin el + (por ejemplo, "5219998888888@c.us").
-2. También puedes cambiar el mensaje en la línea `await client.sendMessage(numero, `${i} Pene`);`.
+2. También puedes cambiar el mensaje en la línea `await client.sendMessage(numero, `mensaje`);`.
 3. Ejecuta `node bot.js` en la terminal.
 4. Escanea el código QR que aparece en la consola con la aplicación de WhatsApp en tu teléfono para autenticar.
 5. Una vez autenticado, el bot enviará los 50 mensajes automáticamente.
