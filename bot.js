@@ -23,7 +23,7 @@ client.on("ready", () => {
 
   const enviarMuchos = async () => {
     for (let i = 1; i <= 300; i++) {
-      await client.sendMessage(numero, `Hola te amo ❤️`); // Mensaje a enviar
+      await client.sendMessage(numero, `Mensaje ejemplo`); // Mensaje a enviar
       console.log(`Enviado: ${i}`);
 
       // Pausa para evitar ser bloqueado
