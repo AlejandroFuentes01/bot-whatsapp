@@ -1,4 +1,4 @@
-const { Client, LocalAuth } = require("whatsapp-web.js");
+const { Client, LocalAuth, MessageMedia } = require("whatsapp-web.js");
 const qrcode = require("qrcode-terminal");
 
 const client = new Client({
@@ -16,14 +16,17 @@ client.on("qr", qr => {
 });
 
 // Cuando ya está listo y logeado
-client.on("ready", () => {
+client.on("ready", async () => {
   console.log("Enchufado");
 
   const numero = "5219998888888@c.us"; // Cambiar por el número destino
+  const media = await MessageMedia.fromUrl(
+    "https://i.pinimg.com/736x/b9/85/c1/b985c11add8b6321b674ae7d2fafa3de.jpg" // Cambiar por la imagen a enviar
+  )
 
   const enviarMuchos = async () => {
     for (let i = 1; i <= 300; i++) {
-      await client.sendMessage(numero, `Mensaje ejemplo`); // Mensaje a enviar
+      await client.sendMessage(numero, media, { caption: `Mensaje ejemplo` }); // Mensaje a enviar
       console.log(`Enviado: ${i}`);
 
       // Pausa para evitar ser bloqueado
